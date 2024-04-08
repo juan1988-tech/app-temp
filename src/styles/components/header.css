@@ -1,0 +1,130 @@
+@import url('../App.css');
+
+.header{
+    height: 5.6rem;
+    background: var(--dark-blue-form);
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 2.4rem;
+}
+
+/*boton de hamburguesa*/
+
+.header-burguer-button{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+.first-button-line,
+.second-button-line,
+.third-button-line{
+    width: 2rem;
+    height: .3rem;
+    border-radius: .15rem;
+    background-color: var(--light-gray-color);
+    transition-duration: 1s;
+}
+
+.first-button-line{
+    position: absolute;
+    top: 0;
+}
+
+/*animacion para el primer boton*/
+.first-button-line-change{
+    height: .3rem;
+    border-radius: .15rem;
+    background-color: var(--light-gray-color);
+    transition-duration: 1s;
+    position: absolute;
+    top: 0;
+    transform: rotate(45deg);
+    transform-origin: 0%;
+    transition-duration: 1s;
+    width: 2.7rem;
+}
+
+.second-button-line{
+    position: absolute;
+    top: 8px;
+    transition-duration: 3s;
+    transition-property: opacity;
+}
+
+/*animacion para el segundo boton*/
+.second-button-line-change{
+    display: none;
+    transition-duration: 1s;
+}
+
+.third-button-line{
+    position: absolute;
+    bottom: 0;
+}
+
+/*animacion para el tercer boton*/
+.third-button-line-change{
+    width: 2rem;
+    height: .3rem;
+    border-radius: .15rem;
+    background-color: var(--light-gray-color);
+    bottom: -2px;
+    transform: rotate(-45deg);
+    transform-origin: 0%;
+    transition-duration: 1s;
+    width: 2.6rem;
+    position: absolute;
+}
+
+.navbar-searcher{
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    width: 23.8rem;
+    border: none;
+    background-color:var(--light-blue-form);
+    margin-left: 1rem;
+    position: relative;
+}
+
+.navbar-text{
+    height: 100%;
+    border-top-left-radius: 1.6rem;
+    border-bottom-left-radius: 1.6rem;
+    background: transparent;
+    color: var(--light-gray-color);
+    border: none;
+    width: 20rem;
+    position: absolute;
+    text-align: center;
+}
+
+.navbar-loop{
+    height: 100%;
+    width: 3.6rem;
+    border: none;
+    position: absolute;
+    background: transparent;
+    border-top-right-radius: 1.6rem;
+    border-bottom-right-radius: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    right: .4rem;
+}
+
+.navbar-loop span{
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    border-top-right-radius: 1.6rem;
+    border-bottom-right-radius: 1.6rem;
+    background-image: url('../../assets/icons/loop.svg');
+    background-size: cover;
+}
+
+

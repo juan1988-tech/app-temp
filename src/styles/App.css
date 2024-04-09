@@ -12,8 +12,22 @@
     rgb(2.1, 24.63, 100.94) 100%
   );
   --second-blue-gradient: linear-gradient(180deg, rgb(38.83, 59.13, 137.06) 0%, rgb(45, 68, 161) 100%);
-  --dark-blue-form: #1A3084;
+  --dark-blue-form: #122263;
   --light-blue-form: #455EB1;
+  --box-component-shadow: 0px 4px 4px 0px rgba(7, 59, 111, 1);
+  /*letras*/
+  --p-small-12:1.2rem;
+  --p-samll-14: 1.4rem;
+  --p-jakarta: 1.6rem;
+  --h4-jakarta: 2rem;
+  --h3-jakarta: 2.4rem;
+  --h2-jakarta: 2.8rem;
+  --h1-jakarta: 3.2rem;
+  --temp-pron-36: 3.6rem;
+  --temp-pron-56: 5.6rem;
+  --temp-pron-60: 6rem;
+  --temp-pron-64: 6.4rem;
+  --temp-pron-72: 7.2rem;
 }
 
 *{
@@ -27,13 +41,10 @@ html{
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background: var(--linear-gradient);
 }
 
 body{
-  color: var(--light-gray-color); 
+  color: var(--light-gray-color);
 }
 
-
-.contenedor{
-  background: var(--linear-gradient);
-}

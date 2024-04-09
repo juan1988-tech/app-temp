@@ -1,0 +1,49 @@
+@import url('../App.css');
+
+.general-data{
+    width: 100%;
+    height: 21.3rem;
+    border-radius: 2.4rem;
+    background: var(--second-blue-gradient);
+    box-shadow: var(--box-component-shadow);
+    margin-top: .8rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.general-location{
+    display: flex;
+    width: 73%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.general-city{
+    font-size: var(--p-jakarta);
+}
+
+.general-date{
+    font-size: var(--p-samll-12);
+}
+
+.general-temperature{
+    font-size: var(--temp-pron-64);
+    font-weight: 400;
+    text-align: center;
+}
+
+.general-sensation{
+    text-align: center;
+    font-size: var(--p-samll-14);
+}
+
+.general-weather-image{
+    width: 7.6rem;
+    height: 7.6rem;
+    margin: 0 auto;
+}
+
+

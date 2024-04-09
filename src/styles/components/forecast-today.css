@@ -1,0 +1,10 @@
+.title-forecast-today{
+    font-size: var(--h4-jakarta);
+    font-weight: 400;
+}
+
+.forecast-today-delay{
+    width: 100%;
+    height: 185;
+}
+

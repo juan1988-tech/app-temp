@@ -6,7 +6,7 @@ const ForecastDiary = ({children}) =>{
     return(
         <>
         <h4 className="title-forecast-dairy">Pronóstico diario</h4>
-        <section className="forecast-diary-delay">
+        <section className="forecast-diary-delay" id="forecast-diary">
             {children}
         </section>
         </>

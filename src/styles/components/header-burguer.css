@@ -1,0 +1,93 @@
+@import url('../App.css');
+
+.header-burguer{
+    background:#1A3084;
+    color: var(--light-gray-color);
+    /*height: 100vh;*/
+    height: 56.8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    transform: translateX(-100%);
+    transition: transform 1s linear;
+}
+
+.header-burguer-change{
+    background:#1A3084;
+    color: var(--light-gray-color);
+    /*height: 100vh;*/
+    height: 56.8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(0%);
+    transition: transform 1s linear;
+}
+
+.clima-app-header{
+    text-align: center;
+    font-size: var(--h2-jakarta);
+    font-weight: 400;
+    padding-top: 1.6rem;
+}
+
+.header-list-right{
+    margin-top:2.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header-list-right li{
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-list-right li:nth-child(2),
+.header-list-right li:nth-child(3),
+.header-list-right li:nth-child(4){
+    margin-top: 3.8rem;
+}
+
+.header-list-right li img{
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.header-list-right li a{
+    display: block;
+    padding-left: 1.2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--light-gray-color);
+}
+
+.changeScaleTemp{
+    display: flex;
+    height: 3.2rem;
+    width: 10.3rem;
+    border-radius: 1.6rem;
+    background: var(--light-blue-form);
+    margin-top: 2.4rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.temp-string{
+    font-size: var(--h4-jakarta);
+}
+
+.expand{
+    display: flex;
+}

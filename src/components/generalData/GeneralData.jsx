@@ -19,7 +19,7 @@ const { months} = today;
 const { year } = today; 
 
     return(
-        <section className='general-data'>
+        <section className='general-data' id="general-data">
             <article className='general-location'>
                 <p className='general-city'>BOGOTÁ</p>
                 <p className='general-date'> { day } DE { months[month] } DE { year }</p>

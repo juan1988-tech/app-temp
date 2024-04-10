@@ -11,7 +11,7 @@ const TimeToday = () =>{
     return(
         <>
         <h4 className="weather-today-title">El tiempo hoy, Bogotá</h4>
-        <section className="weather-today-delay">
+        <section className="weather-today-delay" id="time-today">
             <article className="weather-today">
                 <h1 className="weather-today-temp">22°</h1>
                 <p className="weather-general-state">SOLEADO</p>

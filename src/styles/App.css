@@ -46,5 +46,10 @@ html{
 
 body{
   color: var(--light-gray-color);
+  scroll-behavior: smooth;
+}
+
+.big-container{
+  scroll-behavior: smooth;
 }
 

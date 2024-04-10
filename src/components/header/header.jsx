@@ -1,13 +1,6 @@
-import React, { useState } from "react";
 import '../../styles/components/header.css'
 
-const Header = () =>{
-    const [burguer,changeBurguer] = useState(true);
-
-    const toggleBurguer = () =>{
-        changeBurguer(!burguer);
-    }
-
+const Header = ({burguer,changeBurguer,toggleBurguer}) =>{
     return(
         <header className="header">
             <section className="header-burguer-button" onClick={toggleBurguer}>

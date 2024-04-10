@@ -8,12 +8,20 @@ import ForecastDay from './elements/ForecastDay';
 import ForecastDiary from './components/foreCastDiary/ForecastDiary';
 import Radar from './components/radar/Radar';
 import Footer from './components/Footer/Footer';
+import HeaderBurguer from './components/headerBurguer/HeaderBurguer';
+import { useState } from 'react';
 
 
 function App() {
+   const [burguer,changeBurguer] = useState(true);
+   const toggleBurguer = () =>{
+      changeBurguer(!burguer);
+  }
+  
   return (
      <main className='big-container'>
-        <Header/> 
+        <Header burguer={burguer} changeBurguer={changeBurguer} toggleBurguer={toggleBurguer}/>
+        <HeaderBurguer burguer={burguer} changeBurguer={changeBurguer} toggleBurguer={toggleBurguer}/> 
         <MainContainer>
           <GeneralData/>
           <TimeToday/>

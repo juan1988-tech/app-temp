@@ -46,4 +46,43 @@
     margin: 0 auto;
 }
 
+@media only screen and (min-width: 768px) {
+    .general-data{
+        width: 48rem;
+        height: 15.3rem;
+        padding: 2rem 2.4rem;
+        position: relative;
+    }
+
+    .general-location{
+        width: 23.8rem;
+        margin: 0;
+        align-self: flex-start;
+    }
+
+    .general-city{
+        font-size: var(--h4-jakarta);
+    }
+
+    .general-date{
+        font-size: var(--p-small-14);
+    }
+
+    .general-temperature{
+        align-self: flex-start;
+        font-size: var(--temp-pron-72);
+    }
+
+    .general-sensation{
+        align-self: flex-start;
+    }
+
+    .general-weather-image{
+        position: absolute;
+        align-self: flex-end;
+        justify-self: center;
+        margin: 0;
+    }
+  }
+
 

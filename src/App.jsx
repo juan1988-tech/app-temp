@@ -19,7 +19,7 @@ function App() {
   }
   
   return (
-     <main className='big-container'>
+       <>
         <Header burguer={burguer} changeBurguer={changeBurguer} toggleBurguer={toggleBurguer}/>
         <HeaderBurguer burguer={burguer} changeBurguer={changeBurguer} toggleBurguer={toggleBurguer}/> 
         <MainContainer>
@@ -42,7 +42,7 @@ function App() {
           <Radar/>
         </MainContainer>
         <Footer/>
-      </main> 
+        </>
   )
 }
 

@@ -13,19 +13,19 @@ const HeaderBurguer = ({burguer,changeBurguer,toggleBurguer}) =>{
                 <ul className="header-list-right">
                     <li>
                         <img src={timetodaylogo}/>
-                        <a href="#time-today">El tiempo hoy</a>
+                        <a href="#time-today" burguer={burguer} changeBurguer={changeBurguer} onClick={toggleBurguer}>El tiempo hoy</a>
                     </li>
                     <li>
                         <img src={pornosticToday}/>
-                        <a href="#forecast-today">Pronóstico hoy</a>
+                        <a href="#forecast-today" burguer={burguer} changeBurguer={changeBurguer} onClick={toggleBurguer}>Pronóstico hoy</a>
                     </li>
                     <li>
                         <img  src={pronosticDiary}/>
-                        <a href="#forecast-diary">Pronóstico Diario</a>
+                        <a href="#forecast-diary" burguer={burguer} changeBurguer={changeBurguer} onClick={toggleBurguer}>Pronóstico Diario</a>
                     </li>
                     <li>
                         <img src={radarlogo}/>
-                        <a href="#radar">Radar</a>
+                        <a href="#radar" burguer={burguer} changeBurguer={changeBurguer} onClick={toggleBurguer}>Radar</a>
                     </li>
                 </ul>
                 <section className="changeScaleTemp">

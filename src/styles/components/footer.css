@@ -1,0 +1,42 @@
+.footer{
+    width: 100%;
+    background: var(--dark-blue-form);
+    height: 22.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2.4rem;
+    margin-top: .8rem;
+}
+
+.footer a{
+    color: var(--light-gray-color);
+    text-decoration: none;
+}
+
+.clima-app{
+    font-size: var(--p-jakarta);
+    margin-top: 1.6rem; 
+}
+
+.advert{
+    margin-top: 1.2rem;
+    font-size: var(--p-small-14);
+    text-align: center;
+}
+
+.api-link{
+    font-size: var(--p-small-14);
+    margin-top: 1.4rem;
+}
+
+.advert-support{
+    margin-top: 2.2rem;
+    font-size: var(--p-small-14);
+}
+
+
+.link-developer{
+    margin-top: 1.4rem;
+    font-size: var(--p-small-12);
+}

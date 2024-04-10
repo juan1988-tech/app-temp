@@ -5,6 +5,7 @@
     background-color: var(--second-blue-gradient);
     padding: .6rem;
     box-shadow: var(--box-component-shadow);
+    margin-right: 1.2rem;
 }
 
 .forecast-target{
@@ -33,4 +34,13 @@
     height: 5.2rem;
     display: block;
     margin: 0 auto;
+}
+
+.forecast-min-max{
+    display: flex;
+    width: 9rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: .8rem;
+    font-size: var(--p-jakarta-14);
 }

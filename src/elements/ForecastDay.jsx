@@ -10,6 +10,10 @@ const ForecastDay = () =>{
                 <h1 className="forecast-target-temp">22°</h1>
                 <img className="forecast-target-img" src={sunny}/>
             </div>
+            <article className="forecast-min-max"> 
+                    <p>Max/min</p>
+                    <p>21/11°</p>
+                </article>
         </article>
     )
 }

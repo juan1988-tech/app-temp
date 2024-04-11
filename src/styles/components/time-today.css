@@ -101,3 +101,23 @@
         font-size: var(--p-small-14);
     }
 }
+
+@media only screen and (min-width: 1280px){
+    .weather-today-delay{
+        width: 59.2rem;
+        height: 30rem;
+    }
+
+    .weather-today{
+        width: 13.8rem;
+        height: 5.4rem;
+    }
+
+    .weather-general-data{
+        height: 22.5rem;
+    }
+
+    .weather-general-data p{
+        font-size: var(--p-jakarta);
+    }
+}

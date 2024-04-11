@@ -133,8 +133,6 @@
         position: fixed;
         top:0;
     }
-
-
     .navbar-searcher{
         width: 49.7rem;
         margin-left: 11rem;
@@ -144,4 +142,15 @@
     }
 }
 
+
+@media only screen and (min-width: 1280px){
+    .header{
+        height: 6.4rem;
+    }
+
+    .navbar-searcher{
+        margin-left: 35.6rem;
+        width: 49.7rem;
+    }
+}
 

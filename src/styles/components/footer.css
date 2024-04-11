@@ -61,6 +61,37 @@
     .link-developer{
         font-size: var(--p-jakarta);
     }
+}
 
+@media only screen and (min-width: 1280px){
+    .footer{
+        height: auto;
+    }
 
+    .clima-app{
+        font-size: var(--h1-jakarta);
+    }
+
+    .advert{
+        font-size: var(--p-jakarta);
+        width: 41.7rem;
+    }
+
+    .api-link{
+        font-size: var(--p-jakarta);
+    }
+
+    .api-link:hover{
+        color: var(--green-light-hover);
+        opacity: 1;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+    .link-developer:hover{
+        color: var(--green-light-hover);
+        opacity: 1;
+        transition-property: all;
+        transition-duration: 1s;
+    }
 }

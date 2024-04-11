@@ -30,3 +30,20 @@
         gap: 1.6rem;
     }
 }
+
+@media only screen and (min-width: 1280px){
+    .forecast-today-delay{
+        width: 70.1rem;
+    }
+
+    .forecast-today-delay::-webkit-scrollbar{
+        background-color: transparent;
+        height: 1rem;
+        border-radius: .5rem;
+    }
+
+    .forecast-today-delay::-webkit-scrollbar-thumb{
+        background-color: var(--dark-blue-form);
+        border-radius: .5rem;
+    }
+}

@@ -10,9 +10,8 @@ import pointrose from '../../assets/icons/point-rose.svg';
 
 const TimeToday = () =>{
     return(
-        <>
-        <h4 className="weather-today-title">El tiempo hoy, Bogotá</h4>
-        <section className="weather-today-delay" id="time-today">
+        <>  
+        <section className="weather-today-delay">
             <article className="weather-today">
                 <h1 className="weather-today-temp">22°</h1>
                 <p className="weather-general-state">SOLEADO</p>
@@ -39,8 +38,8 @@ const TimeToday = () =>{
                 <p>7°</p>
             </article>
         </section>
-        </>
+    </>
     )
-}
+} 
 
 export default TimeToday;

@@ -97,3 +97,24 @@
   }
 
 
+  @media only screen and (min-width: 768px){
+    .general-data{
+        height: 18.9rem;
+        width: 59.1rem;
+    }
+
+    .general-temperature{
+        font-size: var(--temp-pron-64);
+    }
+
+    .general-sensation{
+        font-size: var(--p-small-14);
+    }
+
+    .general-weather-image{
+        width: 7.6rem;
+        height: 7.6rem;
+        justify-self: flex-end;
+    }
+  }
+

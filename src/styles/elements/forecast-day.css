@@ -44,3 +44,31 @@
     margin-top: .8rem;
     font-size: var(--p-jakarta-14);
 }
+
+@media only screen and (min-width: 768px){
+    .forecast-day{
+        height: 21.1rem;
+        width: 16rem;
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+
+    .forecast-target{
+        height: 16.9rem;
+    }
+
+    .forecast-hour{
+        font-size: var(--h4-jakarta);
+        font-weight: 400;
+    }
+
+    .forecast-target-temp{
+        font-size: var(--temp-pron-60);
+    }
+
+    .forecast-min-max{
+        font-size: var(--p-jakarta);
+        width: 12rem;
+    }
+
+}

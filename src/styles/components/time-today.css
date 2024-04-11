@@ -51,7 +51,8 @@
     background: var(--light-blue-form);
     margin-top: .4rem;
     display: grid;
-    grid-template: repeat(6, 4.2rem)/3.8rem 12rem auto;
+    grid-template: repeat(6, auto)/3.8rem 60% auto;
+    align-items: center;
     padding: .8rem;
 }
 
@@ -67,4 +68,36 @@
 
 .weather-general-data p{
     justify-self: center;
+}
+
+.weather-general-data img + p,
+.weather-general-data img + p + p{
+    justify-self: flex-start;
+}
+
+@media only screen and (min-width: 768px){
+    .weather-today-title{
+        font-size: var(--h2-jakarta);
+        margin: 1.2rem 0;
+    }    
+
+    .weather-today-delay{
+        width: 48rem;
+        height: 25.8rem
+    }    
+
+    .weather-today{
+        margin: 0;
+        margin-left: 2.4rem;
+    }
+
+    .weather-today-temp{
+        font-size: var(--h1-jakarta);
+    }
+
+    .weather-general-data{
+        height: 18.4rem;
+        grid-template: repeat(3,auto)/repeat(2,4rem 12.5rem auto);
+        font-size: var(--p-small-14);
+    }
 }

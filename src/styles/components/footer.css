@@ -40,3 +40,27 @@
     margin-top: 1.4rem;
     font-size: var(--p-small-12);
 }
+
+@media only screen and (min-width: 768px){
+    .clima-app{
+        font-size: var(--h4-jakarta);
+    }
+
+    .advert{
+        width: 39rem;
+    }
+
+    .advert-support{
+        font-size: var(--p-jakarta);
+    }
+
+    .api-link{
+        font-size: var(--p-jakarta);
+    }
+
+    .link-developer{
+        font-size: var(--p-jakarta);
+    }
+
+
+}

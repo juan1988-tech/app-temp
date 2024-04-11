@@ -10,3 +10,15 @@
     height: 25.1rem;
     border-radius: 1.8rem;
 }
+
+@media only screen and (min-width: 768px){
+    .radar-first-title{
+        font-size: var(--h2-jakarta);
+        margin: 1.2rem 0;
+    }
+
+    .radar-google-map{
+        width: 48rem;
+        height: 48rem;
+    }
+}

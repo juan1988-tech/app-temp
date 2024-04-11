@@ -1,0 +1,27 @@
+.navbar-icons{
+    display: none;
+}
+
+@media only screen and (min-width: 768px){
+    .navbar-icons{
+        display: flex;
+        background: var(--dark-blue-form);
+        width: 5.6rem;
+        height: calc( 100vh - 5.6rem );
+        position: fixed;
+        top: 5.6rem;
+        left: 0;
+        z-index: 3;
+    }
+
+    .navbar-list-images{
+        margin-top: 7.7rem;
+        list-style: none;
+        height: 21.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+}
+

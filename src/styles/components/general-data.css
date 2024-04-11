@@ -49,15 +49,22 @@
 @media only screen and (min-width: 768px) {
     .general-data{
         width: 48rem;
-        height: 15.3rem;
+        height: 16.3rem;
         padding: 2rem 2.4rem;
-        position: relative;
+        display: grid;
+        grid-template:  2.5rem 7.4rem 2.6rem /23.8rem auto;
+        grid-template-areas:"general-location . "
+                            "general-temperature general-weather-image"
+                            "general-sensation .";
+        row-gap: .4rem;                    
+
     }
 
     .general-location{
         width: 23.8rem;
         margin: 0;
         align-self: flex-start;
+        grid-area: general-location;
     }
 
     .general-city{
@@ -71,17 +78,21 @@
     .general-temperature{
         align-self: flex-start;
         font-size: var(--temp-pron-72);
+        grid-area: general-temperature;
+        justify-self: flex-start;
     }
 
     .general-sensation{
-        align-self: flex-start;
+        align-self: center;
+        grid-area: general-sensation;
+        justify-self: flex-start;
     }
 
     .general-weather-image{
-        position: absolute;
         align-self: flex-end;
         justify-self: center;
         margin: 0;
+        grid-area: general-weather-image;
     }
   }
 

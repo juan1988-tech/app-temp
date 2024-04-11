@@ -10,6 +10,7 @@ import Radar from './components/radar/Radar';
 import Footer from './components/Footer/Footer';
 import HeaderBurguer from './components/headerBurguer/HeaderBurguer';
 import { useState } from 'react';
+import NavbarIcons from './elements/NavbarIcons';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
   return (
        <>
         <Header burguer={burguer} changeBurguer={changeBurguer} toggleBurguer={toggleBurguer}/>
-        <HeaderBurguer burguer={burguer} changeBurguer={changeBurguer} toggleBurguer={toggleBurguer}/> 
+        <HeaderBurguer burguer={burguer} changeBurguer={changeBurguer} toggleBurguer={toggleBurguer}/>
+        <NavbarIcons/> 
         <MainContainer>
           <GeneralData/>
           <TimeToday/>

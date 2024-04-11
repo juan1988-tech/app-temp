@@ -23,7 +23,7 @@
     }   
 
     .forecast-diary-delay{
-        width: 68.1rem;
+        width: 52.1rem;
         height: 21.6rem;
         display: grid;
         grid-template-columns: repeat(5,16rem);

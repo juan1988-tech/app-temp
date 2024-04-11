@@ -4,7 +4,7 @@
     background:#1A3084;
     color: var(--light-gray-color);
     /*height: 100vh;*/
-    height: 56.8rem;
+    height: calc( 100vh - 5.6rem);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
     background:#1A3084;
     color: var(--light-gray-color);
     /*height: 100vh;*/
-    height: 56.8rem;
+    height: calc( 100vh - 5.6rem);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -91,3 +91,32 @@
 .expand{
     display: flex;
 }
+
+@media only screen and (min-width: 768px){
+
+    .header-burguer{
+        width: 25.2rem;
+        overflow-x: hidden; 
+        overflow: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        background: var(--dark-blue-form);
+        top: 5.6rem;
+    }
+
+    .header-burguer-change{
+        width: 25.2rem;
+        overflow-x: hidden; 
+        overflow: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        background: var(--dark-blue-form); 
+        top: 5.6rem;
+    }
+
+    .header-list-right li img{
+        opacity: 0;
+    }
+
+}
+

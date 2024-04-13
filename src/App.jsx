@@ -1,12 +1,7 @@
 import AppUI from './appUI/AppUI';
 import { forwardRef ,useRef, useState } from 'react';
 
-function App(){
-   const [burguer,changeBurguer] = useState(true);
-   const toggleBurguer = () =>{
-      changeBurguer(!burguer);
-  }
-
+function App(){ 
   const firstRef = useRef(null);
   const secondRef = useRef(null);
   const thirdRef = useRef(null);
@@ -48,13 +43,9 @@ function App(){
       })
    }
    
-
    return(
       <>
         <AppUI
-            burguer={burguer}
-            changeBurguer={changeBurguer}
-            toggleBurguer={toggleBurguer}
             firstRef={firstRef}
             secondRef={secondRef}
             thirdRef={thirdRef}

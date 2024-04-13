@@ -1,5 +1,5 @@
 import '../styles/App.css';
-import React from 'react';
+import React, { createContext } from 'react';
 import Header from '../components/header/header';
 import MainContainer from '../../containers/maincontainer/mainContainer';
 import GeneralData from '../components/generalData/GeneralData';
@@ -10,27 +10,36 @@ import ForecastDiary from '../components/foreCastDiary/ForecastDiary';
 import Radar from '../components/radar/Radar';
 import Footer from '../components/Footer/Footer';
 import HeaderBurguer from '../components/headerBurguer/HeaderBurguer';
-import { forwardRef ,useRef, useState } from 'react';
 import NavbarIcons from '../elements/NavbarIcons';
 import TimeTodayTitle from '../elements/timeTodayTitle';
 import ForecastTodayTitle from '../elements/ForecastTodayTitle';
 import ForecastDiaryTitle from '../elements/ForecastDiaryTitle';
 import RadarFirstTitle from '../elements/RadarFirstTitle';
+import { useState } from 'react';
+import { BurguerContext } from '../burguerContext';
+import { ToggleBurguerContext } from '../burguerContext';
 
-
-function AppUI({burguer,changeBurguer,toggleBurguer,firstRef,secondRef,
+function AppUI({firstRef,secondRef,
     thirdRef,fourthRef,handleTodayTitle,handleForecastTitle,handleDiaryTitle,
-    handleRadarTitle}){
+    handleRadarTitle}){        
+    const [burguer,changeBurguer] = useState(true);   
+    const toggleBurguer = () =>{
+        changeBurguer(!burguer);
+    }
+
     return(
         <>
-        <Header burguer={burguer} changeBurguer={changeBurguer} toggleBurguer={toggleBurguer}/>
-        <HeaderBurguer burguer={burguer} 
-        changeBurguer={changeBurguer}
-        toggleBurguer={toggleBurguer} 
-        handleTodayTitle={handleTodayTitle}
-        handleForecastTitle={handleForecastTitle}
-        handleDiaryTitle={handleDiaryTitle}
-        handleRadarTitle={handleRadarTitle}/>
+        <ToggleBurguerContext.Provider value={toggleBurguer}>
+        <BurguerContext.Provider value={burguer}>
+            <Header toggleBurguer={toggleBurguer}/>
+            <HeaderBurguer  
+                toggleBurguer={toggleBurguer} 
+                handleTodayTitle={handleTodayTitle}
+                handleForecastTitle={handleForecastTitle}
+                handleDiaryTitle={handleDiaryTitle}
+                handleRadarTitle={handleRadarTitle}/>
+            </BurguerContext.Provider>
+        </ToggleBurguerContext.Provider>
         <NavbarIcons/> 
         <MainContainer>
          <GeneralData />

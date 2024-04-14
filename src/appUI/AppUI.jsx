@@ -15,37 +15,38 @@ import TimeTodayTitle from '../elements/timeTodayTitle';
 import ForecastTodayTitle from '../elements/ForecastTodayTitle';
 import ForecastDiaryTitle from '../elements/ForecastDiaryTitle';
 import RadarFirstTitle from '../elements/RadarFirstTitle';
-import { useState } from 'react';
-import { BurguerContext } from '../burguerContext';
+import { useState, useRef } from 'react';
+import { BurguerContext, SecondRefContext, ThirdRefContext, FourthRefContext } from '../burguerContext';
 import { ToggleBurguerContext } from '../burguerContext';
+import { RefContext } from '../burguerContext';
 
-function AppUI({firstRef,secondRef,
-    thirdRef,fourthRef,handleTodayTitle,handleForecastTitle,handleDiaryTitle,
-    handleRadarTitle}){        
+
+
+function AppUI(){        
     const [burguer,changeBurguer] = useState(true);   
     const toggleBurguer = () =>{
         changeBurguer(!burguer);
-    }
+    }   
+    const firstRef = useRef(null);
+    const secondRef = useRef(null);
+    const thirdRef = useRef(null);
+    const fourthRef = useRef(null);
 
     return(
-        <>
-        <ToggleBurguerContext.Provider value={toggleBurguer}>
-        <BurguerContext.Provider value={burguer}>
-            <Header toggleBurguer={toggleBurguer}/>
-            <HeaderBurguer  
-                toggleBurguer={toggleBurguer} 
-                handleTodayTitle={handleTodayTitle}
-                handleForecastTitle={handleForecastTitle}
-                handleDiaryTitle={handleDiaryTitle}
-                handleRadarTitle={handleRadarTitle}/>
-            </BurguerContext.Provider>
-        </ToggleBurguerContext.Provider>
-        <NavbarIcons/> 
+    <ToggleBurguerContext.Provider value={toggleBurguer}>
+     <BurguerContext.Provider value={burguer}>
+        <RefContext.Provider value={firstRef}>
+         <SecondRefContext.Provider value={secondRef}>
+           <ThirdRefContext.Provider value={thirdRef}>
+            <FourthRefContext.Provider value={fourthRef}> 
+            <Header/>
+            <HeaderBurguer/>
+            <NavbarIcons/> 
         <MainContainer>
          <GeneralData />
-          <TimeTodayTitle ref={firstRef}/>
+          <TimeTodayTitle/>
           <TimeToday/>
-          <ForecastTodayTitle ref={secondRef}/>
+          <ForecastTodayTitle/>
           <ForecastToday>
              <ForecastDay/> 
              <ForecastDay/>
@@ -53,7 +54,7 @@ function AppUI({firstRef,secondRef,
              <ForecastDay/>
              <ForecastDay/>
           </ForecastToday>
-          <ForecastDiaryTitle ref={thirdRef}/>
+          <ForecastDiaryTitle/>
           <ForecastDiary>
              <ForecastDay/>
              <ForecastDay/>
@@ -65,7 +66,12 @@ function AppUI({firstRef,secondRef,
           <Radar/>
         </MainContainer>
         <Footer/>
-        </>
+        </FourthRefContext.Provider>
+        </ThirdRefContext.Provider>
+        </SecondRefContext.Provider> 
+        </RefContext.Provider> 
+      </BurguerContext.Provider>
+    </ToggleBurguerContext.Provider>
     )
 }
 

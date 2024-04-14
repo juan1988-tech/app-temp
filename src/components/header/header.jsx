@@ -2,10 +2,13 @@ import '../../styles/components/header.css';
 import { useContext } from 'react';
 import { BurguerContext } from '../../burguerContext';
 import { ToggleBurguerContext } from '../../burguerContext';
+import ChangeScaleTemp from '../../elements/ChangeScaleTemp';
 
 const Header = () =>{
     const burguerCont = useContext(BurguerContext);
     const toggleBurguerCont = useContext(ToggleBurguerContext);
+    
+
     return(
         <header className="header">
             <section className="header-burguer-button" onClick={toggleBurguerCont}>
@@ -19,6 +22,7 @@ const Header = () =>{
                     <span></span>
                 </button>
             </label>
+            <ChangeScaleTemp classDescription="changeScaleTemp-header"/>
         </header>
     )
 }

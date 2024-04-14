@@ -1,9 +1,14 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useContext, useState } from "react";
 import '../styles/components/forecast-today.css';
+import { SecondRefContext } from "../burguerContext";
+ 
 
-const ForecastTodayTitle = forwardRef((props,ref)=>{
-    return (
-    <h4 {...props} className="title-forecast-today" id="forecast-today" ref={ref}>Pronostico hoy</h4>)
+
+const ForecastTodayTitle = forwardRef((props,ref)=>{  
+    const refCont = useContext(SecondRefContext);
+    return (    
+        <h4 {...props} className="title-forecast-today" ref={refCont}>Pronostico hoy</h4> 
+    )
 })
 
 

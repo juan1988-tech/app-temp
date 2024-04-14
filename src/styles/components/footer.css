@@ -42,6 +42,10 @@
 }
 
 @media only screen and (min-width: 768px){
+    .footer{
+        width: 100%;
+    }
+
     .clima-app{
         font-size: var(--h4-jakarta);
     }

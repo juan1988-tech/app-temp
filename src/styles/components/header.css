@@ -7,6 +7,8 @@
     align-items: center;
     width: 100%;
     padding: 0 2.4rem;
+    position: fixed;
+    top: 0;
 }
 
 /*boton de hamburguesa*/
@@ -130,7 +132,6 @@
 
 @media only screen and (min-width: 768px){
     .header{
-        position: fixed;
         top:0;
     }
     .navbar-searcher{

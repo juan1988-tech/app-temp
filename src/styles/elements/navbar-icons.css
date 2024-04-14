@@ -7,7 +7,7 @@
         display: flex;
         background: var(--dark-blue-form);
         width: 5.6rem;
-        height: calc( 100vh - 5.6rem );
+        height: 100%;
         position: fixed;
         top: 5.6rem;
         left: 0;

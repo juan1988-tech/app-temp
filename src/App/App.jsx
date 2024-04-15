@@ -16,9 +16,8 @@ import ForecastTodayTitle from '../elements/ForecastTodayTitle';
 import ForecastDiaryTitle from '../elements/ForecastDiaryTitle';
 import RadarFirstTitle from '../elements/RadarFirstTitle';
 import { useState, useRef } from 'react';
-import { BurguerContext, SecondRefContext, ThirdRefContext, FourthRefContext } from '../burguerContext';
 import { ToggleBurguerContext } from '../burguerContext';
-import { RefContext } from '../burguerContext';
+
 
 function App(){        
     const [burguer,changeBurguer] = useState(true);   
@@ -31,46 +30,38 @@ function App(){
     const fourthRef = useRef(null);
 
     return(
-    <ToggleBurguerContext.Provider value={toggleBurguer}>
-     <BurguerContext.Provider value={burguer}>
-        <RefContext.Provider value={firstRef}>
-         <SecondRefContext.Provider value={secondRef}>
-           <ThirdRefContext.Provider value={thirdRef}>
-            <FourthRefContext.Provider value={fourthRef}> 
-            <Header/>
-            <HeaderBurguer/>
-            <NavbarIcons/> 
+    <ToggleBurguerContext.Provider value={{burguer,changeBurguer,toggleBurguer,firstRef,secondRef,thirdRef,fourthRef}}>
+       <Header/>
+       <HeaderBurguer/>
+       <NavbarIcons/> 
         <MainContainer>
-         <GeneralData />
-          <TimeTodayTitle/>
-          <TimeToday/>
-          <ForecastTodayTitle/>
-          <ForecastToday>
-             <ForecastDay/> 
-             <ForecastDay/>
-             <ForecastDay/>
-             <ForecastDay/>
-             <ForecastDay/>
-          </ForecastToday>
-          <ForecastDiaryTitle/>
-          <ForecastDiary>
-             <ForecastDay/>
-             <ForecastDay/>
-             <ForecastDay/>
-             <ForecastDay/>
-             <ForecastDay/>
-          </ForecastDiary>
-          <RadarFirstTitle/>
-          <Radar/>
-        </MainContainer>
-        <Footer/>
-        </FourthRefContext.Provider>
-        </ThirdRefContext.Provider>
-        </SecondRefContext.Provider> 
-        </RefContext.Provider> 
-      </BurguerContext.Provider>
-    </ToggleBurguerContext.Provider>
+      <GeneralData />
+     <TimeTodayTitle/>
+     <TimeToday/>
+     <ForecastTodayTitle/>
+     <ForecastToday>
+        <ForecastDay/> 
+        <ForecastDay/>
+        <ForecastDay/>
+        <ForecastDay/>
+        <ForecastDay/>
+     </ForecastToday>
+     <ForecastDiaryTitle/>
+     <ForecastDiary>
+        <ForecastDay/>
+        <ForecastDay/>
+        <ForecastDay/>
+        <ForecastDay/>
+        <ForecastDay/>
+     </ForecastDiary>
+     <RadarFirstTitle/>
+     <Radar/>
+   </MainContainer>
+   <Footer/>
+</ToggleBurguerContext.Provider>
     )
 }
 
 export default App;
+
+

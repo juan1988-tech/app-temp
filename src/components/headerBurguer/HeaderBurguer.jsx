@@ -5,21 +5,16 @@ import pronosticDiary from '../../assets/icons/pronostic-diary.svg';
 import radarlogo from '../../assets/icons/radar.svg';
 import ChangeScaleTemp from "../../elements/ChangeScaleTemp";
 import '../../styles/components/header-burguer.css';
-import { BurguerContext, RefContext, ToggleBurguerContext, SecondRefContext, ThirdRefContext, FourthRefContext } from "../../burguerContext";
+import { ToggleBurguerContext } from "../../burguerContext";
 import { useContext, useRef } from "react";
 
 const HeaderBurguer = () =>{   
-        const burguerCont = useContext(BurguerContext);
-        const firstRefCont = useContext(RefContext);
-        const seconRefCont = useContext(SecondRefContext);
-        const thirdRefCont = useContext(ThirdRefContext);
-        const fourthRefCont = useContext(FourthRefContext);
-        const toggleBurguerCont = useContext(ToggleBurguerContext);
+        const { burguer,toggleBurguer,firstRef,secondRef,thirdRef,fourthRef } = useContext(ToggleBurguerContext) 
         
         const handleTodayTitle = (event) =>{
-            toggleBurguerCont();
+            toggleBurguer();
             event.preventDefault();
-            firstRefCont.current.scrollIntoView({
+            firstRef.current.scrollIntoView({
                behavior: 'smooth',
                block: 'start',
                inline: 'center'
@@ -27,9 +22,9 @@ const HeaderBurguer = () =>{
         }
         
         const handleForecastTitle = (event) =>{
-            toggleBurguerCont();
+            toggleBurguer();
             event.preventDefault();
-            seconRefCont.current.scrollIntoView({
+            secondRef.current.scrollIntoView({
                behavior: 'smooth',
                block: 'start',
                inline: 'center'
@@ -37,28 +32,26 @@ const HeaderBurguer = () =>{
          }
 
          const handleDiaryTitle = (event) =>{
-            toggleBurguerCont();
+            toggleBurguer();
             event.preventDefault();
-            thirdRefCont.current.scrollIntoView({
+            thirdRef.current.scrollIntoView({
                behavior: 'smooth',
                block: 'start',
                inline: 'center'
             })
          }
 
-
          const handleRadarTitle = (event) =>{
-            toggleBurguerCont();
             event.preventDefault();
-            fourthRefCont.current.scrollIntoView({
+            toggleBurguer();
+            fourthRef.current.scrollIntoView({
                behavior: 'smooth',
                block: 'start',
                inline: 'center'
             })
          }
         return(
-            <ToggleBurguerContext.Provider value={burguerCont}>
-            <aside className={burguerCont?'header-burguer':'header-burguer-change'}>
+            <aside className={burguer?'header-burguer':'header-burguer-change'}>
                 <h2 className="clima-app-header">CLIMA APP</h2>
                 <ul className="header-list-right">
                     <li>
@@ -80,7 +73,6 @@ const HeaderBurguer = () =>{
                 </ul>
                <ChangeScaleTemp classDescription="changeScaleTemp"/>
             </aside>
-         </ToggleBurguerContext.Provider>
         )
 }
 

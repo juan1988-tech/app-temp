@@ -1,11 +1,11 @@
 import React, { forwardRef, useContext } from "react";
 import '../styles/components/time-today.css';
-import { RefContext } from "../burguerContext";
+import { ToggleBurguerContext } from '../burguerContext';
 
 const TimeTodayTitle = forwardRef((props,ref)=>{
-  const refCont = useContext(RefContext);
+  const { firstRef } = useContext(ToggleBurguerContext);
       return (              
-        <h4 {...props} className="weather-today-title" ref={refCont}>El tiempo hoy, Bogotá</h4>
+        <h4 {...props} className="weather-today-title" ref={firstRef}>El tiempo hoy, Bogotá</h4>
       )  
 })
 

@@ -1,11 +1,11 @@
 import React, { forwardRef, useContext } from "react";
 import '../styles/components/radar.css';
-import { FourthRefContext } from "../burguerContext";
+import { ToggleBurguerContext } from "../burguerContext";
 
 const RadarFirstTitle = forwardRef((props,ref)=>{
-    const refCont = useContext(FourthRefContext)
+    const { fourthRef } = useContext(ToggleBurguerContext);
     return(
-        <h4 {...props} className="radar-first-title" ref={refCont}>Radar</h4>
+        <h4 {...props} className="radar-first-title" ref={fourthRef}>Radar</h4>
     )
 })
 

@@ -20,9 +20,7 @@ import { BurguerContext, SecondRefContext, ThirdRefContext, FourthRefContext } f
 import { ToggleBurguerContext } from '../burguerContext';
 import { RefContext } from '../burguerContext';
 
-
-
-function AppUI(){        
+function App(){        
     const [burguer,changeBurguer] = useState(true);   
     const toggleBurguer = () =>{
         changeBurguer(!burguer);
@@ -62,7 +60,7 @@ function AppUI(){
              <ForecastDay/>
              <ForecastDay/>
           </ForecastDiary>
-          <RadarFirstTitle ref={fourthRef}/>
+          <RadarFirstTitle/>
           <Radar/>
         </MainContainer>
         <Footer/>
@@ -75,4 +73,4 @@ function AppUI(){
     )
 }
 
-export default AppUI;
+export default App;

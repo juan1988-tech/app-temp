@@ -2,37 +2,11 @@ import '../../styles/components/header.css';
 import { useContext, useEffect, useState } from 'react';
 import { ToggleBurguerContext } from '../../burguerContext';
 import ChangeScaleTemp from '../../elements/ChangeScaleTemp';
-
-/* const useCityData = () =>{
-    const [city,setCity] = useState()
-    const APIcity = `http://api.openweathermap.org/geo/1.0/direct?q=bogota&limit=1&appid=1ae718f4903ab234f9810bd6a50e0ef5`
-    useEffect(()=>{
-        fetch(APIcity)
-        .then(result=>result.json())
-        .then((result)=>{setCity(result)})
-        .catch((error)=>{
-            error = new Error('lo siento no encontramos tu ciudad ');
-            console.log(error)})
-    },[])        
-
-    return city
-}
- */
+import { useObtainCity } from '../../hooks/useObtainCity';
+  
 const Header = () =>{
-    const { burguer,changeBurguer,toggleBurguer } = useContext(ToggleBurguerContext);
-    const [city,setCity] = useState()
-    const APIcity = `http://api.openweathermap.org/geo/1.0/direct?q=${'bogota'}&limit=1&appid=1ae718f4903ab234f9810bd6a50e0ef5`;
-
-    useEffect(()=>{
-        fetch(APIcity)
-        .then(result=>result.json())
-        .then((result)=>{setCity(result)})
-        .catch((error)=>{
-            error = new Error('lo siento no encontramos tu ciudad ');
-            console.log(error)});    
-        },[])
-
-    console.log(city);
+    const { burguer,toggleBurguer } = useContext(ToggleBurguerContext);
+    const { handleInputCity,handleCityInputSend } = useObtainCity();
 
     return(
         <header className="header">
@@ -42,8 +16,9 @@ const Header = () =>{
                 <article className={burguer?"third-button-line":"third-button-line-change"}></article>
             </section>
             <label className="navbar-searcher">    
-                <input type="text" className="navbar-text"/>
-                <button className="navbar-loop">
+                <input type="text" className="navbar-text" onChange={handleInputCity}/>
+                
+                <button className="navbar-loop" onClick={handleCityInputSend}>
                     <span></span>
                 </button>
             </label>

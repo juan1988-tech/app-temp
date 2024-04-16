@@ -19,6 +19,7 @@ import { useState, useRef } from 'react';
 import { ToggleBurguerContext } from '../burguerContext';
 
 
+
 function App(){        
     const [burguer,changeBurguer] = useState(true);   
     const toggleBurguer = () =>{
@@ -28,9 +29,13 @@ function App(){
     const secondRef = useRef(null);
     const thirdRef = useRef(null);
     const fourthRef = useRef(null);
+    
+    const [globalDataCity,setGlobalDataCity] = useState();
 
+    console.log(globalDataCity);
+    
     return(
-    <ToggleBurguerContext.Provider value={{burguer,changeBurguer,toggleBurguer,firstRef,secondRef,thirdRef,fourthRef}}>
+    <ToggleBurguerContext.Provider value={{burguer,changeBurguer,toggleBurguer,firstRef,secondRef,thirdRef,fourthRef,globalDataCity,setGlobalDataCity}}>
        <Header/>
        <HeaderBurguer/>
        <NavbarIcons/> 

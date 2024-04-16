@@ -1,34 +1,38 @@
 import { useState, useContext } from 'react';
 import { ToggleBurguerContext } from '../burguerContext';
+import axios from 'axios';
 
 const useObtainCity = ()=>{
     const [city,setCity] = useState();
     const [inputCity,setInputCity] = useState();
+    const {generalCity,setGeneralCity} = useContext(ToggleBurguerContext)
     const {globalDataCity,setGlobalDataCity} = useContext(ToggleBurguerContext);
      
     const handleInputCity = (e) =>{
-        const inputCity = e.target.value
+        const inputCity = e.target.value;
         inputCity.replace(/\s/g, '-');
+        console.log(inputCity);
         setInputCity(inputCity);   
     }
-
-    function handleCityInputSend(e){
+ 
+ function handleCityInputSend(e){
         e.preventDefault();
+
         const firstUrlPart = 'http://api.openweathermap.org/geo/1.0/direct?q=$';
         const secondUrlPart = '&limit=&appid=1ae718f4903ab234f9810bd6a50e0ef5';
-        const completUrl = firstUrlPart+inputCity+secondUrlPart;
-        
-        /**url para llevar a la ubicacion conocida más cercana */
-        const otherUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=4.6529539&lon=-74.0835643&limit=1&appid=1ae718f4903ab234f9810bd6a50e0ef5`
+        const latlongUrl = firstUrlPart+inputCity+secondUrlPart;
 
-        fetch(completUrl)
-            .then(res=>res.json())
-            .then(res=>setCity(res))
-            .then(()=>{
-                let { name,lat,lon } = city[0]
-                setGlobalDataCity({ name,lat,lon })      
+        axios.get(latlongUrl)
+            .then(function(response){
+                setCity(response.data);
+            })
+            .then(function(){
+                console.log(city[0].local_names.es)
+                setGeneralCity(city[0].local_names.es);
             })
     }
+
+        /* funciones cambio de datos general data*/
 
     return {
         city,
@@ -37,6 +41,8 @@ const useObtainCity = ()=>{
         setInputCity,
         handleInputCity,
         handleCityInputSend,
+        generalCity,
+        setGeneralCity
     }   
 }  
 

@@ -31,11 +31,12 @@ function App(){
     const fourthRef = useRef(null);
     
     const [globalDataCity,setGlobalDataCity] = useState();
+    const [generalCity,setGeneralCity] = useState('Bogotá')
 
-    console.log(globalDataCity);
     
     return(
-    <ToggleBurguerContext.Provider value={{burguer,changeBurguer,toggleBurguer,firstRef,secondRef,thirdRef,fourthRef,globalDataCity,setGlobalDataCity}}>
+    <ToggleBurguerContext.Provider value={{burguer,changeBurguer,toggleBurguer,firstRef,
+    secondRef,thirdRef,fourthRef,globalDataCity,setGlobalDataCity,generalCity,setGeneralCity}}>
        <Header/>
        <HeaderBurguer/>
        <NavbarIcons/> 

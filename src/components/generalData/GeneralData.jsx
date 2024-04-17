@@ -5,9 +5,7 @@ import { ToggleBurguerContext } from '../../burguerContext';
 
 const GeneralData = () =>{
 const date = new Date().getDate()
-
-const { globalDataCity, setGeneralCity } = useContext(ToggleBurguerContext);
-const { generalCity } = useContext(ToggleBurguerContext)
+const {generalCityDefault,setGeneralCityDefault,generalTempDefault,setGeneralTempDefault} = useContext(ToggleBurguerContext)
 
 const today ={
     day: new Date().getDate(),
@@ -26,10 +24,10 @@ const { year } = today;
     return(
         <section className='general-data' id="general-data">
             <article className='general-location'>
-                <p className='general-city'>{generalCity}</p>
+                <p className='general-city'>{generalCityDefault}</p>
                 <p className='general-date'> { day } DE { months[month] } DE { year }</p>
             </article>
-            <h1 className='general-temperature'>22°</h1>
+            <h1 className='general-temperature'>{generalTempDefault}</h1>
             <p className='general-sensation'>SOLEADO</p>
             <img className="general-weather-image" src={soleado}/>
         </section>

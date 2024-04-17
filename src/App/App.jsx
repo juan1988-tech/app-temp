@@ -29,14 +29,16 @@ function App(){
     const secondRef = useRef(null);
     const thirdRef = useRef(null);
     const fourthRef = useRef(null);
-    
-    const [globalDataCity,setGlobalDataCity] = useState();
-    const [generalCity,setGeneralCity] = useState('Bogotá')
 
-    
+    const [generalData,setGeneralData] = useState();
+    const [generalCityDefault,setGeneralCityDefault] = useState('Bogotá');
+    const [generalTempDefault,setGeneralTempDefault] = useState("21°");
+
     return(
     <ToggleBurguerContext.Provider value={{burguer,changeBurguer,toggleBurguer,firstRef,
-    secondRef,thirdRef,fourthRef,globalDataCity,setGlobalDataCity,generalCity,setGeneralCity}}>
+    secondRef,thirdRef,fourthRef,generalData,setGeneralData,generalCityDefault,setGeneralCityDefault,
+    generalTempDefault,setGeneralTempDefault
+    }}>
        <Header/>
        <HeaderBurguer/>
        <NavbarIcons/> 

@@ -64,18 +64,22 @@
     }
 
     .general-location{
-        width: 23.8rem;
+        width: auto;
         margin: 0;
         align-self: flex-start;
         grid-area: general-location;
+        display: flex;
+        flex-direction: row;
     }
 
     .general-city{
         font-size: var(--h4-jakarta);
+        width: auto;
     }
 
     .general-date{
         font-size: var(--p-small-14);
+        margin-top: 0;
     }
 
     .general-temperature{

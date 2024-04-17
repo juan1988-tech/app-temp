@@ -18,7 +18,7 @@ const Header = () =>{
             <label className="navbar-searcher">    
                 <input type="text" className="navbar-text" onChange={handleInputCity}/>
                 
-                <button className="navbar-loop" onClick={handleCityInputSend}>
+                <button className="navbar-loop" type='submit' onClick={handleCityInputSend}>
                     <span></span>
                 </button>
             </label>

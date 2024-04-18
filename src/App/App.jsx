@@ -18,8 +18,6 @@ import RadarFirstTitle from '../elements/RadarFirstTitle';
 import { useState, useRef } from 'react';
 import { ToggleBurguerContext } from '../burguerContext';
 
-
-
 function App(){        
     const [burguer,changeBurguer] = useState(true);   
     const toggleBurguer = () =>{
@@ -30,15 +28,20 @@ function App(){
     const thirdRef = useRef(null);
     const fourthRef = useRef(null);
 
-    const [generalData,setGeneralData] = useState();
-    const [generalCityDefault,setGeneralCityDefault] = useState('Bogotá');
-    const [generalTempDefault,setGeneralTempDefault] = useState("21°");
+    const [defaultCity,setDefaultcity] = React.useState({
+      city:'Bogota',
+      temp: '25°',
+      sens: 'SOLEADO'
+  
+  })
+
+   const [city,setCity]= useState()
+   let [weatherDesc, setWeatherDesc] = useState('');
+   
 
     return(
     <ToggleBurguerContext.Provider value={{burguer,changeBurguer,toggleBurguer,firstRef,
-    secondRef,thirdRef,fourthRef,generalData,setGeneralData,generalCityDefault,setGeneralCityDefault,
-    generalTempDefault,setGeneralTempDefault
-    }}>
+    secondRef,thirdRef,fourthRef,city,setCity,defaultCity,setDefaultcity,weatherDesc, setWeatherDesc}}>
        <Header/>
        <HeaderBurguer/>
        <NavbarIcons/> 

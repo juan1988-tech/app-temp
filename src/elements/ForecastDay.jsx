@@ -1,6 +1,6 @@
 import React from "react";
 import '../../src/styles/elements/forecast-day.css';
-import sunny from '../assets/images/soleado.png';
+import sunny from '../assets/images/cielo-claro.png';
 
 const ForecastDay = () =>{
     return(

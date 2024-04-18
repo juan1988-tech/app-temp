@@ -1,5 +1,5 @@
 import React from "react";
-import soleado from '../../assets/images/soleado.png';
+import soleado from '../../assets/images/cielo-claro.png';
 import '../../styles/components/time-today.css';
 import maxmin from '../../assets/icons/max-min.svg';
 import humidity from '../../assets/icons/humidity.svg';

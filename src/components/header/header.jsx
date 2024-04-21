@@ -27,7 +27,7 @@ const Header = () =>{
             .then(res=>res.json())
             .then(data=>setCity(data))
             .then(function(){
-                setWeathCond(city.weather[0].id)
+                setWeathCond(city?.weather[0]?.id)
                 
                 if(weatherDesc>=200 && weatherDesc<=232){
                     setWeatherDesc(`TORMENTA`)

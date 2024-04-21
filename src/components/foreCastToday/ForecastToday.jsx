@@ -5,14 +5,14 @@ import ForecastDay from "../../elements/ForecastDay";
 
 const ForecastToday = () => {
 const [forecastHours,setForecastHours] = React.useState();
+const currentHour = new Date().getHours()
+
 useEffect(()=>{
     axios.get('https://api.openweathermap.org/data/2.5/forecast?q=venecia&appid=1ae718f4903ab234f9810bd6a50e0ef5')
     .then(function(data){
         setForecastHours(data);
     })
 },[])
-
-const currentHour = new Date().getHours()
 
 const listHours = forecastHours?.data?.list
 
@@ -21,7 +21,7 @@ let currentHourList = listHours?.slice(currentHour,currentHour+5);
     return(
         <>
             <section className="forecast-today-delay">
-                {currentHourList.map(({dt_txt,main})=>{
+                {currentHourList?.map(({dt_txt,main})=>{
           
                     let dateTex = dt_txt
                     const patron = /(\d{2}:\d{2})/
@@ -41,6 +41,7 @@ let currentHourList = listHours?.slice(currentHour,currentHour+5);
                     forecasDate={hour[1]}
                     forecastTemp={`${editedTemp}°`}
                     forecastMaxMin={maxMin}
+                    key={maxMin}
                         />
                 })}
             </section>

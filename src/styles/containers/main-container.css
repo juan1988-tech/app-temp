@@ -11,10 +11,3 @@
         margin-top: 6.4rem;
     }
 }
-
-@media only screen and (min-width: 768px){
-    .main-container{
-        margin-left: 27.2rem;
-        margin-top: 8rem;
-    }
-}

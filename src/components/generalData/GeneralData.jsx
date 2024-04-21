@@ -1,20 +1,11 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import '../../styles/components/general-data.css';
-import soleado from '../../assets/images/cielo-claro.png';
-import lluvia from '../../assets/images/lluvia.png';
-import parcialLLueve from '../../assets/images/parcial-llueve.png';
-import nubes from '../../assets/images/nubes.png';
-import llovizna from '../../assets/images/llovizna.png';
-import tormenta from '../../assets/images/tormenta.png'
-
-
+import GeneralWeatherImage from '../../elements/GeneralWeatherImage';
 import { ToggleBurguerContext } from '../../burguerContext';
 
 const GeneralData = () =>{
 const { defaultCity} = useContext(ToggleBurguerContext);
 const date = new Date().getDate();
-let { weatherDesc } = useContext(ToggleBurguerContext);
-console.log(weatherDesc);
 
 const today ={
     day: new Date().getDate(),
@@ -37,11 +28,7 @@ const { year } = today;
             </article>
             <h1 className='general-temperature'>{defaultCity.temp}</h1>
             <p className='general-sensation'>{defaultCity.sens}</p>
-            {weatherDesc==='CIELO CLARO'?<img className="general-weather-image" src={soleado}/>:<img className="general-weather-image" src={soleado}/> }
-            {weatherDesc==='TORMENTA'?<img className="general-weather-image" src={tormenta}/>:<img className="general-weather-image" src={soleado}/>}    
-            {weatherDesc==='LLOVIZNA'?<img className="general-weather-image" src={llovizna}/>:<img className="general-weather-image" src={soleado}/>}
-            {weatherDesc==='LLUVIA'?<img className="general-weather-image" src={lluvia}/>:<img className="general-weather-image" src={soleado}/>}
-            {weatherDesc==='NEVADO'?<img className="general-weather-image" src={nubes}/>:<img className="general-weather-image" src={soleado}/>}
+            <GeneralWeatherImage/>    
         </section>
     )
 }

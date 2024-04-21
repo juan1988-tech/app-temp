@@ -31,17 +31,17 @@ function App(){
     const [defaultCity,setDefaultcity] = React.useState({
       city:'Bogota',
       temp: '25°',
-      sens: 'SOLEADO'
+      sens: 'CIELO CLARO'
   
   })
 
    const [city,setCity]= useState()
-   let [weatherDesc, setWeatherDesc] = useState('');
-   
+   let [weatherDesc, setWeatherDesc] = useState();
+   let [classNameImage,setClassNameImage] = useState('general-weather-cielo-claro')   
 
     return(
     <ToggleBurguerContext.Provider value={{burguer,changeBurguer,toggleBurguer,firstRef,
-    secondRef,thirdRef,fourthRef,city,setCity,defaultCity,setDefaultcity,weatherDesc, setWeatherDesc}}>
+    secondRef,thirdRef,fourthRef,city,setCity,defaultCity,setDefaultcity,weatherDesc, setWeatherDesc,classNameImage,setClassNameImage}}>
        <Header/>
        <HeaderBurguer/>
        <NavbarIcons/> 
@@ -50,21 +50,9 @@ function App(){
      <TimeTodayTitle/>
      <TimeToday/>
      <ForecastTodayTitle/>
-     <ForecastToday>
-        <ForecastDay/> 
-        <ForecastDay/>
-        <ForecastDay/>
-        <ForecastDay/>
-        <ForecastDay/>
-     </ForecastToday>
+     <ForecastToday/>
      <ForecastDiaryTitle/>
-     <ForecastDiary>
-        <ForecastDay/>
-        <ForecastDay/>
-        <ForecastDay/>
-        <ForecastDay/>
-        <ForecastDay/>
-     </ForecastDiary>
+     <ForecastDiary/>
      <RadarFirstTitle/>
      <Radar/>
    </MainContainer>

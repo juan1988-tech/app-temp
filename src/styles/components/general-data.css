@@ -43,10 +43,38 @@
     font-size: var(--p-samll-14);
 }
 
-.general-weather-image{
+.general-weather-cielo-claro, 
+.general-weather-lluvia,
+.general-weather-llovizna,
+.general-weather-parcialLlueve,
+.general-weather-nubes,
+.general-weather-tormenta
+{
     width: 7.6rem;
     height: 7.6rem;
     margin: 0 auto;
+    background-image: url('../../assets/images/cielo-claro.png');
+    background-size: cover;
+}
+
+.general-weather-lluvia{
+    background-image: url('../../assets/images/lluvia.png');
+}
+
+.general-weather-llovizna{
+    background-image: url('../../assets/images/llovizna.png');
+}
+
+.general-weather-parcialLlueve{
+    background-image: url('../../assets/images/parcial-llueve.png');
+}
+
+.general-weather-nubes{
+    background-image: url('../../assets/images/nubes.png');
+}
+
+.general-weather-tormenta{
+    background-image: url('../../assets/images/tormenta.png');
 }
 
 @media only screen and (min-width: 768px) {
@@ -95,7 +123,12 @@
         justify-self: flex-start;
     }
 
-    .general-weather-image{
+    .general-weather-cielo-claro, 
+    .general-weather-lluvia,
+    .general-weather-llovizna,
+    .general-weather-parcialLlueve,
+    .general-weather-nubes,
+    .general-weather-tormenta{
         align-self: flex-end;
         justify-self: center;
         margin: 0;
@@ -118,7 +151,12 @@
         font-size: var(--p-small-14);
     }
 
-    .general-weather-image{
+    .general-weather-cielo-claro, 
+    .general-weather-lluvia,
+    .general-weather-llovizna,
+    .general-weather-parcialLlueve,
+    .general-weather-nubes,
+    .general-weather-tormenta{
         width: 7.6rem;
         height: 7.6rem;
         justify-self: flex-end;

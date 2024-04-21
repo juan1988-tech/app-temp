@@ -17,7 +17,7 @@
 }
 
 .forecast-hour{
-    font-size: var(--p-jakarta);
+    font-size: var(--p-small-12);
     text-align: center;
     display: block;
     margin: 0 auto;
@@ -58,7 +58,7 @@
     }
 
     .forecast-hour{
-        font-size: var(--h4-jakarta);
+        font-size: var(--p-jakarta);
         font-weight: 400;
     }
 

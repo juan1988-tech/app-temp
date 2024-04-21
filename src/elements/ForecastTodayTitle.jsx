@@ -5,7 +5,7 @@ import { ToggleBurguerContext } from "../burguerContext";
 const ForecastTodayTitle = forwardRef((props,ref)=>{  
    const { secondRef } = useContext(ToggleBurguerContext)
     return (    
-        <h4 {...props} className="title-forecast-today" ref={secondRef}>Pronostico hoy</h4> 
+        <h4 {...props} className="title-forecast-today" ref={secondRef}>Pronostico hoy,Bogotá</h4> 
     )
 })
 

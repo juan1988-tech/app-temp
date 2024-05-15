@@ -29,7 +29,7 @@ const day = forecastData?.data?.forecast?.forecastday
                 let partdate = date.split('-');
                 let year = partdate[0];
                 let month = parseInt(partdate[1]);
-                let monthDesc = meses[month]
+                let monthDesc = meses[month - 1]
                 let dayDate = parseInt(partdate[2])
                 const completeDate = `${monthDesc} ${dayDate}, ${year}`;
            
